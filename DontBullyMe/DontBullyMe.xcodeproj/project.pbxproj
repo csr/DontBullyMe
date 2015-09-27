@@ -14,6 +14,7 @@
 		EB4D5BCD1BB80C1200BAD1ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4D5BCB1BB80C1200BAD1ED /* LaunchScreen.storyboard */; };
 		EB4D5BD81BB80C1200BAD1ED /* DontBullyMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D5BD71BB80C1200BAD1ED /* DontBullyMeTests.swift */; };
 		EB4D5BE31BB80C1200BAD1ED /* DontBullyMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D5BE21BB80C1200BAD1ED /* DontBullyMeUITests.swift */; };
+		EB4D5BF31BB8108A00BAD1ED /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB4D5BF21BB8108A00BAD1ED /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		EB4D5BDE1BB80C1200BAD1ED /* DontBullyMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DontBullyMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4D5BE21BB80C1200BAD1ED /* DontBullyMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DontBullyMeUITests.swift; sourceTree = "<group>"; };
 		EB4D5BE41BB80C1200BAD1ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB4D5BF21BB8108A00BAD1ED /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB4D5BF31BB8108A00BAD1ED /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 		EB4D5BB61BB80C1200BAD1ED = {
 			isa = PBXGroup;
 			children = (
+				EB4D5BF21BB8108A00BAD1ED /* MapKit.framework */,
 				EB4D5BC11BB80C1200BAD1ED /* DontBullyMe */,
 				EB4D5BD61BB80C1200BAD1ED /* DontBullyMeTests */,
 				EB4D5BE11BB80C1200BAD1ED /* DontBullyMeUITests */,
@@ -192,6 +196,12 @@
 				TargetAttributes = {
 					EB4D5BBE1BB80C1200BAD1ED = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = WC2NUT8MA5;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					EB4D5BD21BB80C1200BAD1ED = {
 						CreatedOnToolsVersion = 7.0;
@@ -398,7 +408,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DontBullyMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wec.DontBullyMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,7 +421,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DontBullyMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wec.DontBullyMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
