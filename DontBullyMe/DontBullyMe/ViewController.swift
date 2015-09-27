@@ -47,9 +47,42 @@ class ViewController: UIViewController, UISearchBarDelegate, MKMapViewDelegate, 
         self.navigationItem.titleView = searchController.searchBar
         searchController.searchBar.placeholder = "Search for places..."
         
+        let newYorkLocation = CLLocationCoordinate2DMake(40.730872, -74.003066)
+        // Drop a pin
+        let dropPin = MKPointAnnotation()
+        dropPin.coordinate = newYorkLocation
+        dropPin.title = "New York City"
+        mapView.addAnnotation(dropPin)
+        
         //searchResultsTableViewController.tableView.delegate = self
         //searchResultsTableViewController.tableView.dataSource = self
     }
+    
+    func mapView(mapView: MKMapView!,
+        viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+            
+            if annotation is MKUserLocation {
+                return nil
+            }
+            
+            let reuseId = "pin"
+            
+            var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+            if pinView == nil {
+                pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                pinView!.canShowCallout = true
+                pinView!.animatesDrop = true
+                pinView!.pinColor = .Red
+                
+            }
+            else {
+                pinView!.annotation = annotation
+            }
+            
+            
+            return pinView
+    }
+
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let newLocation = locations.last!
