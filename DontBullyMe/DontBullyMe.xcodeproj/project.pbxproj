@@ -191,6 +191,7 @@
 		EB4D5BB71BB80C1200BAD1ED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = WecTeam;
 				TargetAttributes = {
@@ -497,6 +498,7 @@
 				EB4D5BE91BB80C1200BAD1ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB4D5BEA1BB80C1200BAD1ED /* Build configuration list for PBXNativeTarget "DontBullyMeTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +507,7 @@
 				EB4D5BEC1BB80C1200BAD1ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB4D5BED1BB80C1200BAD1ED /* Build configuration list for PBXNativeTarget "DontBullyMeUITests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +516,7 @@
 				EB4D5BEF1BB80C1200BAD1ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
