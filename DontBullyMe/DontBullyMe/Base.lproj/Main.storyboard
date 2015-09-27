@@ -30,6 +30,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="DontBullyMe" id="vYt-fp-fuQ"/>
+                    <connections>
+                        <outlet property="mapView" destination="N5i-xh-xtX" id="e7a-pP-brG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
