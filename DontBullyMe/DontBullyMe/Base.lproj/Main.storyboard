@@ -23,7 +23,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q6K-y3-tuO">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem image="request0" id="VFE-eQ-Lod"/>
+                                    <barButtonItem image="request0" id="VFE-eQ-Lod">
+                                        <connections>
+                                            <action selector="tapOnGetLocation:" destination="BYZ-38-t0r" id="cOu-V1-odE"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -38,8 +42,11 @@
                             <constraint firstItem="N5i-xh-xtX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ufT-mN-P3n"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="DontBullyMe" id="vYt-fp-fuQ"/>
+                    <navigationItem key="navigationItem" title="DontBullyMe" id="vYt-fp-fuQ">
+                        <barButtonItem key="leftBarButtonItem" image="profile" id="Fkb-DI-qy3"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="buttonGetLocationToolbar" destination="VFE-eQ-Lod" id="4DC-YI-tY9"/>
                         <outlet property="mapView" destination="N5i-xh-xtX" id="e7a-pP-brG"/>
                     </connections>
                 </viewController>
@@ -67,6 +74,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="profile" width="22" height="21"/>
         <image name="request0" width="22" height="22"/>
     </resources>
 </document>

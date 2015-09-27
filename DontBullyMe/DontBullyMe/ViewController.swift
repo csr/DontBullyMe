@@ -19,6 +19,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MKMapViewDelegate, 
     @IBOutlet weak var mapView: MKMapView!
     var searchController: UISearchController!
     var searchResultsTableViewController: UITableViewController!
+    @IBOutlet weak var buttonGetLocationToolbar: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +62,11 @@ class ViewController: UIViewController, UISearchBarDelegate, MKMapViewDelegate, 
         print("Error!")
     }
     
-    
+    @IBAction func tapOnGetLocation(sender: AnyObject) {
+        UIView.animateWithDuration(0.5, animations: {
+            self.buttonGetLocationToolbar.image = UIImage(named: "request1")
+        })
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -69,23 +74,25 @@ class ViewController: UIViewController, UISearchBarDelegate, MKMapViewDelegate, 
     }
 }
 
-extension ViewController: UISearchControllerDelegate
-{
+
+
+extension ViewController: UISearchControllerDelegate {
     func willPresentSearchController(searchController: UISearchController) {
-        //caculate frame here
+        // calculate frame
         let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
         let navigationBarFrame = navigationController!.navigationBar.frame
         let tableViewY = navigationBarFrame.height + statusBarHeight
         let tableViewHeight: CGFloat = 30
         
         searchResultsTableViewController.tableView.frame = CGRectMake(0, tableViewY, navigationBarFrame.width, tableViewHeight)
-        
-        
     }
+    
     override func viewWillLayoutSubviews() {
     }
+    
     func presentSearchController(searchController: UISearchController) {
     }
+    
     func didPresentSearchController(searchController: UISearchController) {
     }
 }
